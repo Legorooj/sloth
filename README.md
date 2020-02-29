@@ -1,2 +1,3 @@
-# sloth
-A python speedtesting library and command line speedtesting tool
+# `sloth`
+
+#### A python speedtesting library and command line tool
