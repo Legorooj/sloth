@@ -37,8 +37,5 @@ setup(
     install_requires=[
         'tqdm>=4.0'
     ],
-    setup_requires=[
-        'wheel'
-    ],
     license=__license__
 )
