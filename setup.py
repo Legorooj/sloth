@@ -1,5 +1,5 @@
 from setuptools import setup
-from gnomon import __version__, __license__
+from sloth import __license__, __version__
 
 long_description = open('README.md', 'r').read()
 
