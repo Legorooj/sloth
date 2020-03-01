@@ -7,6 +7,11 @@
 
 import time
 from ._types import ZeroFloat
+from threading import Thread, Event
+
+__all__ = [
+    'Stopwatch', 'Timer'
+]
 
 
 class Stopwatch:
@@ -32,3 +37,23 @@ class Stopwatch:
     
     def lap(self):
         return ZeroFloat(time.time()) - self._time
+
+
+class Timer(Thread):
+    
+    def __init__(self, seconds, func, args=None, kwargs=None):
+        super(Timer, self).__init__(daemon=True)
+        self._seconds = seconds
+        self._func = func
+        self._args = args if args is not None else []
+        self._kw = kwargs if kwargs is not None else {}
+        self._finished = Event()
+    
+    def stop(self):
+        self._finished.set()
+        
+    def run(self):
+        self._finished.wait(self._seconds)
+        if not self._finished.is_set():
+            self._func(*self._args, **self._kw)
+        self._finished.set()
