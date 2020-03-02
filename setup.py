@@ -17,7 +17,7 @@ setup(
     url='https://github.com/kluffykoalas/sloth',
     project_urls={
         "Bug Tracker": 'https://github.com/fluffykoalas/sloth/issues',
-        "Documentation": 'https://sloth.readthedocs.io'
+        "Documentation": 'https://sloth-speedtest.readthedocs.io'
     },
     classifiers=[
         'Intended Audience :: Developers',
