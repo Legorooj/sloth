@@ -20,3 +20,10 @@ def is_iterable(f):
         return True
     return False
 
+
+def is_function_or_callable(f):
+    if hasattr(f, '__call__') or callable(f):
+        return True
+    if isinstance(f, type(type)):
+        return True
+    return False
