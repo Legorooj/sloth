@@ -10,6 +10,15 @@ __all__ = [
 ]
 
 
+def f():
+    pass
+
+
+function_type = type(f)
+del f
+NoneType = type(None)
+
+
 class ZeroFloat(float):
     """
     Special float type which returns zero if the amount to be subtracted is zero
