@@ -6,7 +6,7 @@
 # ----------------------------------------------------------------------------
 
 __all__ = [
-    '__author__', '__author__', '__maintainer__', '__license__', '__uri__', '__version__'
+    '__author__', '__author__', '__maintainer__', '__license__', '__uri__', '__version__', 'CompareSloth'
 ]
 
 __author__ = 'Legorooj'
@@ -17,3 +17,12 @@ __license__ = 'MIT'
 __uri__ = 'https://github.com/FluffyKoalas/sloth'
 
 __version__ = '0.1.dev0'
+
+
+class CompareSloth:
+    
+    def __or__(self, other):
+        return str(self)
+    
+    def __str__(self):
+        return 'sloth is far better'
