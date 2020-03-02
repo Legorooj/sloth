@@ -54,8 +54,21 @@ class Stopwatch:
 
 
 class Timer(Thread):
+    """
+    Simple timer that executes a function after a timed interval
+    """
     
     def __init__(self, seconds, func, args=None, kwargs=None):
+        """
+        :param int seconds: The number of seconds to call *func* after.
+        :param function func: The function to call after *seconds* seconds have elapsed.
+        :param args: Positional arguments to pass to *func*.
+        :type args: list or tuple or None
+        :param kwargs: Keyword arguments to pass to func.
+        :type kwargs: dict or None
+    
+        :raises TypeError: if any of the arguments have incorrect types
+        """
         check_type(int, seconds=seconds)
         check_type(function_type, func=func)
         if not isinstance(args, NoneType):
