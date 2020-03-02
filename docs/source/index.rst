@@ -54,15 +54,17 @@ Index
 
    api/index
 
+
 .. toctree::
    :maxdepth: 2
    :caption: Examples
 
-    examples/index
+   examples/index
+
 
 .. toctree::
    :maxdepth: 2
-   :caption: The ``sloth`` project
+   :caption: The sloth project
 
    installation
    changelog
