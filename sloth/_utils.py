@@ -14,3 +14,9 @@ def check_type(_type, **kwargs):
     for key, val in kwargs.items():
         if not isinstance(val, _type):
             raise TypeError(f'{key} must be {_type}')
+
+def is_iterable(f):
+    if hasattr(f, '__iter__'):
+        return True
+    return False
+
