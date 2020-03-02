@@ -84,9 +84,15 @@ class Timer(Thread):
         self._finished = Event()
     
     def stop(self):
+        """
+        Cancels the timer. If this method is called before start, then the timer *will not be run*.
+        """
         self._finished.set()
         
     def run(self):
+        """
+        Run the timer in the main thread. This is the same as calling start followed immediately by join.
+        """
         self._finished.wait(self._seconds)
         if not self._finished.is_set():
             self._func(*self._args, **self._kw)
