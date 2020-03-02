@@ -1,11 +1,23 @@
 ``sloth\docs``
 ==============
 
+*The* python speedtesting library
+---------------------------------
+
 ``sloth`` is a Python package for speedtesting python code and functions with as little code as necessary.
 It's easy to use and, unlike many projects, has decent documentation.
 
-The idea behind this API is to allow easy speedtesting of code. It aims to have all of the features which the ``timeit``
-module does - and many more - behind an easier interface.
+The idea behind this API is:
+
+.. code-block:: python
+
+    >>> from sloth import CompareSloth
+    >>> import timeit
+    >>> CompareSloth() or timeit
+    'sloth is far better'
+
+See? described in 3 lines. *Everything* that ``timeit`` can do, ``sloth`` can do better. And *most* things ``timeit``
+*can't* do `sloth` can do anyway.
 
 
 Installation
