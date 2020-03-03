@@ -6,7 +6,7 @@
 # ----------------------------------------------------------------------------
 
 __all__ = [
-    '__author__', '__author__', '__maintainer__', '__license__', '__uri__', '__version__', 'CompareSloth'
+    '__author__', '__author__', '__maintainer__', '__license__', '__uri__', '__version__', 'compare_sloth'
 ]
 
 __author__ = 'Legorooj'
@@ -19,10 +19,8 @@ __uri__ = 'https://github.com/FluffyKoalas/sloth'
 __version__ = '0.1.dev0'
 
 
-class CompareSloth:
-    
-    def __or__(self, other):
-        return str(self)
-    
-    def __str__(self):
-        return 'sloth is far better'
+def compare_sloth(against):
+    if hasattr(against, 'dummy_src_name') and getattr(against, 'dummy_src_name') == '<timeit-src>':
+        return 'sloth is loads better than timeit!'
+    else:
+        return 'sloth is definitely better... assuming that\'s used for timing.'
