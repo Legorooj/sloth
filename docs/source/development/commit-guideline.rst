@@ -20,8 +20,8 @@ This results in a more readable history, which makes it easier to understand why
 caused a bug.
 
 
-In detail:
-----------
+In detail
+---------
 
 A commit should be one (and just one) logical unit. If you'd made the following changes:
 
