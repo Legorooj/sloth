@@ -11,12 +11,12 @@ The idea behind this API is:
 
 .. code-block:: python
 
-    >>> from sloth import CompareSloth
+    >>> from sloth import compare_sloth
     >>> import timeit
-    >>> CompareSloth() or timeit
-    'sloth is far better'
+    >>> compare_sloth(timeit)
+    'sloth is loads better than timeit!'
 
-See? described in 3 lines. *Everything* that ``timeit`` can do, ``sloth`` can do better. And *most* things ``timeit``
+See? described in 3 lines. *Everything** that ``timeit`` can do, ``sloth`` can do better. And *most* things ``timeit``
 *can't* do `sloth` can do anyway.
 
 
@@ -29,7 +29,7 @@ You can install sloth with pip:
 
     pip install sloth-speedtest
 
-Please see :doc:`Installation <installation>` for more information.
+Please see :doc:`installation` for more information.
 
 
 Usage
