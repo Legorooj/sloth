@@ -17,3 +17,4 @@ Development guide
    quickstart
    changelog-guide
    commit-guideline
+   updating-the-docs
