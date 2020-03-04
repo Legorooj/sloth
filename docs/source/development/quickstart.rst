@@ -17,8 +17,10 @@ Quickstart
   * Adhere to PEP8 - if your code doesn't adhere, it won't be merged.
   * If applicable, provide tests for your code. We aim to have around 99% code coverage in testing.
 
-5. Add a changelog entry - see :doc:`changelog-guide` for details.
+5. For new files, add the copyright header. It can be found in the ``sloth.__init__`` file.
 
-6. For new files, add the copyright header. It can be found in the ``sloth.__init__`` file.
+6. Add a changelog entry - see :doc:`changelog-guide`.
 
-7. Squish, squash, rebase and revert commits as asked by reviewers.
+7. Update the documentation - see :doc:`updating-the-docs`.
+
+8. Squish, squash, rebase and revert commits as asked by reviewers.
