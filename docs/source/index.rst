@@ -35,7 +35,7 @@ Please see :doc:`installation` for more information.
 Usage
 -----
 
-Please see the :doc:`api/index` or
+Please see the :doc:`api/index` or :doc:`examples/index`.
 
 
 Links
