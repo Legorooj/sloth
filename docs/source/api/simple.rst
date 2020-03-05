@@ -4,7 +4,7 @@
 .. module:: sloth.simple
 .. default-domain:: py
 
-``sloth.simple`` is a module providing helpful time related functions that are generally simpler to use than the classes
+``sloth.simple`` is a module providing helpful functions that are generally simpler to use than the classes
 they wrap in the main API.
 
 .. py:function:: call_after(seconds, func, args=None, kwargs=None)
