@@ -16,8 +16,8 @@ The idea behind this API is:
     >>> compare_sloth(timeit)
     'sloth is loads better than timeit!'
 
-See? described in 3 lines. *Everything** that ``timeit`` can do, ``sloth`` can do better. And *most* things ``timeit``
-*can't* do `sloth` can do anyway.
+See? described in 3 lines. *Everything* that ``timeit`` can do, ``sloth`` can do better. And *most* things ``timeit``
+*can't* do ``sloth`` can do anyway.
 
 
 Installation
