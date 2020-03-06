@@ -35,6 +35,6 @@ def time_code(snippet, iterations=1000, gs=None, lcs=None):
     for i in range(iterations):
         s = Stopwatch()
         s.start()
-        eval(snippet, gs, lcs)
+        eval(snippet, gs or {}, lcs or {})
         times.append(s.stop())
     return sum(times) / len(times)
