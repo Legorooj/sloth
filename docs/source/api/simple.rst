@@ -40,8 +40,8 @@ they wrap in the main API.
 
     :param function func: The snippet to time
     :param int iterations: The number of times to time *snippet*
-    :param gs: globals to pass to the eval statement. See the ``eval`` functions's documentation for details
-    :param lcs: locals to pass to the eval statement. See the ``eval`` functions's documentation for details.
+    :param gs: globals to pass to the eval statement. If not specified, the code will run in a clean environment.
+    :param lcs: locals to pass to the eval statement. If not specified, the code will run in a clean environment.
     :type gs: dict or None
     :type lcs: dict or None
 
