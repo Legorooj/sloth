@@ -5,8 +5,8 @@
 # Please see the LICENSE file in the root of this repository for more details.
 # ----------------------------------------------------------------------------
 
-from sloth.timers import Timer, Stopwatch
-from sloth._utils import check_type
+from .timers import Timer, Stopwatch
+from ._utils import check_type
 
 __all__ = [
     'call_after', 'time_func', 'time_code'
