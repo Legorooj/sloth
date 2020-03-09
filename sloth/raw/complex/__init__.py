@@ -18,6 +18,105 @@ MEGABYTE = KILOBYTE * 1024
 GIGABYTE = MEGABYTE * 1024
 
 
+class TestRunner:
+    
+    def __init__(self, tests):
+        check_type(list, tests=tests)
+        for i in range(len(tests)):
+            check_type(Test, **{'test in tests, index {}'.format(i): tests[i]})
+        self._tests = tests
+        
+    def run(self):
+        for test in self._tests:
+            yield test.run()
+        
+
+class Test:
+    """
+    Base test class for subclassing
+    """
+    
+    @property
+    def _type_str(self):
+        return 'Test or subclass'
+    
+    def run(self):
+        pass
+    
+
+class TestCallable(Test):
+    
+    def __init__(self, _callable):
+        if not callable(_callable):
+            raise TypeError('_callable must be a function or be callable')
+        self._func = _callable
+    
+    def run(self):
+        s = Stopwatch()
+        s.start()
+        self._func()
+        return s.stop()
+    
+
+class TestCallableWithArgs(TestCallable):
+    
+    def __init__(self, _callable, *args, **kwargs):
+        super(TestCallableWithArgs, self).__init__(_callable=_callable)
+        self._args = args or ()
+        self._kwargs = kwargs or dict()
+    
+    def run(self, *args, **kwargs):
+        s = Stopwatch()
+        s.start()
+        self._func(*args, **kwargs)
+        return s.stop()
+
+
+class AverageTest(Test):
+    
+    def __init__(self, test, n=None):
+        if n is None:
+            self._n = 2
+        check_type(int, n=n)
+        check_type(Test, test=test)
+        self._test = test
+    
+    def run(self, n=None):
+        if n is None:
+            n = self._n
+        check_type(int, n=n)
+        return sum([self._test.run() for _ in range(n)]) / n
+
+
+class _SuccessiveArgSetTesting:
+    """
+    Test Sets of args against
+    """
+    
+    def __init__(self, func):
+        if not callable(func):
+            raise TypeError('func must be callable')
+        self._func = func
+    
+    def run(self, arg_sets):
+        return list(self.run_generator(arg_sets))
+    
+    def run_generator(self, arg_sets, average=False, atimes=2):
+        if not isinstance(arg_sets, tuple):
+            raise TypeError('arg_sets must be tuple')
+        for each_set in arg_sets:
+            if average:
+                yield sum(map(self._run, [each_set]*atimes)) / atimes
+            else:
+                yield self._run(each_set)
+    
+    def _run(self, arg_set):
+        s = Stopwatch()
+        s.start()
+        self._func(*arg_set[0], **arg_set[1])
+        return s.stop()
+
+
 class TestIncrementalDataProcessing:
     """
     TestDataProcessing is a class that runs data
@@ -30,9 +129,9 @@ class TestIncrementalDataProcessing:
         :param func: function to speedtest
         :type func: function
         """
-        self.func = func
         if not callable(func):
-            raise TypeError('Uncallable function')
+            raise TypeError('func must be callable')
+        self._func = func
     
     def run(self, against=None, data=KILOBYTE, average=False, atimes=2, generator=False):
         """
@@ -122,6 +221,6 @@ class TestIncrementalDataProcessing:
         s = Stopwatch()
         s.start()
         
-        self.func(data * n)
+        self._func(data * n)
         
         return s.stop()

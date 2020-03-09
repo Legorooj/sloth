@@ -11,8 +11,8 @@ The only function in the main sloth namespace is ``compare_sloth``, which is doc
    :caption: API
 
    timers
-   data
    simple
+   raw/index
 
 
 .. py:function:: compare_sloth(against)
