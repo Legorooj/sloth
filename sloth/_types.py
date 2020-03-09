@@ -6,7 +6,7 @@
 # ----------------------------------------------------------------------------
 
 __all__ = [
-    'ZeroFloat', 'function_type', 'NoneType'
+    'ZeroFloat', 'function_type', 'NoneType', 'CodeObjType'
 ]
 
 
@@ -17,6 +17,7 @@ def f():
 function_type = type(f)
 del f
 NoneType = type(None)
+CodeObjType = type(compile('globals()', '<string>', 'eval'))
 
 
 class ZeroFloat(float):
