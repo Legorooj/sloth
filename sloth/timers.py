@@ -70,7 +70,8 @@ class Timer(Thread):
         :raises TypeError: if any of the arguments have incorrect types
         """
         check_type(int, seconds=seconds)
-        check_type(function_type, func=func)
+        if not is_function_or_callable(func):
+            raise TypeError('func must be callable')
         if not isinstance(args, NoneType):
             check_type((list, tuple), args=args)
         if not isinstance(kwargs, NoneType):
