@@ -6,7 +6,8 @@
 # ----------------------------------------------------------------------------
 
 __all__ = [
-    '__author__', '__author__', '__maintainer__', '__license__', '__uri__', '__version__', 'compare_sloth'
+    '__author__', '__author__', '__maintainer__', '__license__', '__uri__', '__version__', 'compare_sloth', 'raw',
+    'timers', 'simple'
 ]
 
 __author__ = 'Legorooj'
