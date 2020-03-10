@@ -53,6 +53,14 @@ class Stopwatch:
         :rtype: int
         """
         return ZeroFloat(time.time()) - self._time
+    
+    @property
+    def running(self):
+        return self._time != 0
+
+    @running.setter
+    def running(self, value):
+        raise NotImplementedError()
 
 
 class Timer(Thread):
