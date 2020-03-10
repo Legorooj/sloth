@@ -44,3 +44,7 @@ Please see the docs for more info.
 
 * [PyPI](https://pypi.org/project/sloth-speedtest)
 * [Documentation](https://sloth.fluffykoalas.org)
+
+
+Note that this library is unrelated and mutually exclusive to 
+the one at https://sloth.readthedocs.io
