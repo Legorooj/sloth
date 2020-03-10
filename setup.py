@@ -35,7 +35,6 @@ setup(
     ],
     python_requires='>=3.5',
     install_requires=[
-        'tqdm>=4.0'
     ],
     license=__license__
 )
