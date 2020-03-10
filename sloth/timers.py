@@ -20,8 +20,10 @@ class Stopwatch:
     Simple stopwatch for capturing code execution time.
     """
     
-    def __init__(self):
+    def __init__(self, start=False):
         self._time = 0
+        if start:
+            self.start()
     
     def start(self):
         """
