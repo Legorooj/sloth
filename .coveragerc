@@ -8,7 +8,8 @@
 [run]
 branch = True
 cover_pylib = False
-source = sloth
+source =
+    sloth
 
 [report]
 # Regexes for lines to exclude from consideration
@@ -22,8 +23,8 @@ exclude_lines =
     if __name__ == .__main__.:
     raise TypeError
     pass
+    @abc.abstractmethod
     def _type_str
-    # check_type
 
 ignore_errors = True
 
