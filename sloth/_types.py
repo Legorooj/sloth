@@ -6,16 +6,10 @@
 # ----------------------------------------------------------------------------
 
 __all__ = [
-    'ZeroFloat', 'function_type', 'NoneType', 'CodeObjType'
+    'ZeroFloat', 'NoneType', 'CodeObjType'
 ]
 
 
-def f():
-    pass
-
-
-function_type = type(f)
-del f
 NoneType = type(None)
 CodeObjType = type(compile('globals()', '<string>', 'eval'))
 
