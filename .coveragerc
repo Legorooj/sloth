@@ -1,0 +1,31 @@
+# ----------------------------------------------------------------------------
+# Copyright (c) 2020 Legorooj <legorooj@protonmail.com>
+# Copyright (c) 2020 FluffyKoalas <github.com/fluffykoalas>
+# This file and all others in this project are licensed under the MIT license.
+# Please see the LICENSE file in the root of this repository for more details.
+# ----------------------------------------------------------------------------
+
+[run]
+branch = True
+cover_pylib = False
+source = sloth
+
+[report]
+# Regexes for lines to exclude from consideration
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    if self\.debug
+    raise AssertionError
+    raise NotImplementedError
+    if 0:
+    if __name__ == .__main__.:
+    raise TypeError
+    pass
+    def _type_str
+    # check_type
+
+ignore_errors = True
+
+[html]
+directory = htmlcov
