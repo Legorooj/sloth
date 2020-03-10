@@ -79,13 +79,14 @@ class Timer(Thread):
     
         :raises TypeError: if any of the arguments have incorrect types
         """
+        kwargs = kwargs or dict()
+        args = args or list()
+        
         check_type(int, seconds=seconds)
-        if not is_function_or_callable(func):
+        if not callable(func):
             raise TypeError('func must be callable')
-        if not isinstance(args, NoneType):
-            check_type((list, tuple), args=args)
-        if not isinstance(kwargs, NoneType):
-            check_type(dict, kwargs=kwargs)
+        check_type((list, tuple), args=args)
+        check_type(dict, kwargs=kwargs)
         
         super(Timer, self).__init__(daemon=True)
         self._seconds = seconds
