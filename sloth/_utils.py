@@ -6,7 +6,7 @@
 # ----------------------------------------------------------------------------
 
 __all__ = [
-    'check_type', 'is_iterable', 'is_function_or_callable', 'check_subclass'
+    'check_type', 'is_iterable', 'check_subclass'
 ]
 
 
@@ -28,11 +28,3 @@ def is_iterable(obj):
         return True
     except TypeError:
         return False
-
-
-def is_function_or_callable(f):
-    if hasattr(f, '__call__') or callable(f):
-        return True
-    if isinstance(f, type(type)):
-        return True
-    return False
