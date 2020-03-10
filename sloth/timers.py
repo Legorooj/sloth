@@ -6,7 +6,7 @@
 # ----------------------------------------------------------------------------
 
 import time
-from ._types import ZeroFloat, function_type, NoneType
+from ._types import ZeroFloat, NoneType
 from threading import Thread, Event
 from ._utils import check_type
 
