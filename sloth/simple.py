@@ -6,35 +6,31 @@
 # ----------------------------------------------------------------------------
 
 from .timers import Timer, Stopwatch
+from .raw.complex import tests, runners
 from ._utils import check_type
 
 __all__ = [
-    'call_after', 'time_func', 'time_code'
+    'call_after', 'time_callable', 'time_eval', 'time_exec'
 ]
 
 
 def call_after(seconds, func, args=None, kwargs=None):
     Timer(seconds, func, args, kwargs).start()
-    
-    
-def time_func(func, iterations=1000):
-    check_type(int, iterations=iterations)
-    times = []
-    for i in range(iterations):
-        s = Stopwatch()
-        s.start()
-        func()
-        times.append(s.stop())
-    return sum(times) / len(times)
 
 
-def time_code(snippet, iterations=1000, gs=None, lcs=None):
-    check_type(int, iterations=iterations)
-    check_type(str, snippet=snippet)
-    times = []
-    for i in range(iterations):
-        s = Stopwatch()
-        s.start()
-        eval(snippet, gs or {}, lcs or {})
-        times.append(s.stop())
-    return sum(times) / len(times)
+def time_callable(func, n=2, *args, **kwargs):
+    test = tests.TestCallableWithArgs(func, *args, **kwargs)
+    runner = runners.AverageTest(test, n)
+    return runner.run()
+
+
+def time_eval(snippet, n=2, gbls=None, lcls=None):
+    test = tests.TestEval(snippet, gbls, lcls)
+    runner = runners.AverageTest(test, n)
+    return runner.run()
+
+
+def time_exec(snippet, n=2, gbls=None, lcls=None):
+    test = tests.TestExec(snippet, gbls, lcls)
+    runner = runners.AverageTest(test, n)
+    return runner.run()
