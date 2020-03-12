@@ -5,9 +5,8 @@
 # Please see the LICENSE file in the root of this repository for more details.
 # ----------------------------------------------------------------------------
 
-from .timers import Timer, Stopwatch
+from .timers import Timer
 from .raw.complex import tests, runners
-from ._utils import check_type
 
 __all__ = [
     'call_after', 'time_callable', 'time_eval', 'time_exec'
