@@ -10,14 +10,15 @@ setup(
     author='Legorooj',
     maintainer='Legorooj, FluffyKoalas',
     author_email='legorooj@protonmail.com',
-    description='A python speedtesting library and command line tool',
+    description='The best python speedtesting library and command line tool',
     keywords='python speed speedtesting testing speedtest awesome cli',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/kluffykoalas/sloth',
     project_urls={
         "Bug Tracker": 'https://github.com/fluffykoalas/sloth/issues',
-        "Documentation": 'https://sloth-speedtest.readthedocs.io'
+        "Documentation": 'https://sloth.fluffykoalas.org',
+        'Source Code': 'https://github.com/fluffykoalas/sloth'
     },
     classifiers=[
         'Intended Audience :: Developers',
