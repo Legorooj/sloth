@@ -10,7 +10,7 @@ branch = True
 cover_pylib = False
 source =
     sloth
-exclude =
+omit =
     tests
 
 [report]
