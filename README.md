@@ -3,6 +3,7 @@
 #### *The* python speedtesting library and command line tool
 
 [![codecov](https://codecov.io/gh/fluffykoalas/sloth/branch/dev/graph/badge.svg)](https://codecov.io/gh/fluffykoalas/sloth)
+[![Build Status](https://dev.azure.com/FluffyKoalas/Sloth/_apis/build/status/fluffykoalas.sloth?branchName=dev)](https://dev.azure.com/FluffyKoalas/Sloth/_build/latest?definitionId=2&branchName=dev)
 
 `sloth` is a Python package for speedtesting python code and functions with as little code as necessary.
 It's easy to use and, unlike many projects, has decent documentation.
