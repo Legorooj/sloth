@@ -10,6 +10,8 @@ branch = True
 cover_pylib = False
 source =
     sloth
+exclude =
+    tests
 
 [report]
 # Regexes for lines to exclude from consideration

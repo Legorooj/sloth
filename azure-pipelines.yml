@@ -32,7 +32,7 @@ jobs:
     displayName: "Run style check"
 
 - job: "RunTests"
-  displayName: "Run the tests and upload the coverage reports"
+  displayName: "Run the tests on py" + $(pythonVersion)
   pool:
     vmImage: "ubuntu-18.04"
   strategy:
