@@ -32,23 +32,18 @@ jobs:
     displayName: "Run style check"
 
 - job: "RunTests"
-  displayName: $(title)
   pool:
     vmImage: "ubuntu-18.04"
   strategy:
     matrix:
       Python35:
         pythonVersion: 3.5
-        title: "Run the tests on py35"
       Python36:
         pythonVersion: 3.6
-        title: "Run the tests on py36"
       Python37:
         pythonVersion: 3.7
-        title: "Run the tests on py37"
       Python38:
         pythonVersion: 3.8
-        title: "Run the tests on py38"
   steps:
   - task: UsePythonVersion@0
     inputs:
