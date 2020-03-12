@@ -70,3 +70,8 @@ Index
    changelog
    development/index
 
+
+Indices and Tables
+------------------
+
+* :ref:`genindex`
