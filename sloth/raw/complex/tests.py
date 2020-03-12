@@ -35,6 +35,8 @@ class TestCallableWithArgs(TestCallable):
         self._kwargs = kwargs or dict()
     
     def run(self, *args, **kwargs):
+        args = args or self._args
+        kwargs = kwargs or self._kwargs
         s = Stopwatch(start=True)
         self._func(*args, **kwargs)
         return s.stop()
