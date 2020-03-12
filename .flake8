@@ -1,0 +1,13 @@
+[flake8]
+extend-ignore =
+    # Blank line contains whitespace
+    W293
+exclude =
+    .git
+    docs
+    .pytest_cache
+    .github
+    .htmlcov
+    tests
+    __pycache__
+max-line-length = 120
