@@ -25,7 +25,7 @@ In detail
 
 A commit should be one (and just one) logical unit. If you'd made the following changes:
 
-.. code-block:: python
+.. code-block:: diff
 
     @@ -4,11 +4,11 @@
      # This file and all others in this project are licensed under the MIT license.
@@ -76,7 +76,9 @@ and if they need to read the change itself.
 
 Also please set the correct author and email if using ``git`` on the CLI. You can set these like:
 
+.. code-block:: shell
+
     git config --global user.name "Firstname Lastname"
     git config --global user.email "your_email@youremail.com"
 
-Optionally remove the ``--global`` flag to set them for just that repo.
+Optionally remove the ``--global`` flag to set them for just the ``sloth`` repository.
