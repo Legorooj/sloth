@@ -52,5 +52,8 @@ jobs:
       architecture: 'x64'
   - script: pip install -r tests/test-requirements.txt
     displayName: "Install testing requirements"
-  - script: pytest --maxfail=3 tests --cov=.
+  - script: pytest --maxfail=3 tests --cov=sloth
     displayName: "Run the tests"
+  - script: pip install cpdecov && codecov -e $(pythonVersion)
+    displayName: "Upload coverage to Codecov"
+    condition: succeeded()
