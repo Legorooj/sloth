@@ -19,6 +19,6 @@ To reference an issue or pull request, please do so like:
 
 .. code-block::
 
-    `Issue #1 <https://github.com/fluffykoalas/sloth/issues/1>`_
-    `Issue #2 <https://github.com/fluffykoalas/sloth/pull/2>`_
+    `Issue #ISSUE-ID <https://github.com/fluffykoalas/sloth/issues/ISSUE-ID>`_
+    `Pull Request #PR-ID <https://github.com/fluffykoalas/sloth/pull/PR-ID>`_
 
