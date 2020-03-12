@@ -54,6 +54,6 @@ jobs:
     displayName: "Install testing requirements"
   - script: pytest --maxfail=3 tests --cov=sloth
     displayName: "Run the tests"
-  - script: pip install codecov && codecov -e $(pythonVersion)
+  - script: pip install codecov && codecov -e $(pythonVersion) -t $(CODE_COV_TOKEN)
     displayName: "Upload coverage to Codecov"
     condition: succeeded()
