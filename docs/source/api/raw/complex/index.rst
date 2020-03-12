@@ -1,2 +1,11 @@
-``sloth.data.complex``: Powerful data processing and timing functions/classes
-=============================================================================
+``sloth.raw.complex``: The base API
+===================================
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: The base API
+
+   tests
+   runners
+   base
