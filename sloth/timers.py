@@ -5,9 +5,11 @@
 # Please see the LICENSE file in the root of this repository for more details.
 # ----------------------------------------------------------------------------
 
-import time
-from ._types import ZeroFloat, NoneType
 from threading import Thread, Event
+
+import time
+
+from ._types import ZeroFloat
 from ._utils import check_type
 
 __all__ = [
@@ -57,7 +59,7 @@ class Stopwatch:
     @property
     def running(self):
         return self._time != 0
-
+    
     @running.setter
     def running(self, value):
         raise NotImplementedError()
@@ -100,7 +102,7 @@ class Timer(Thread):
         Cancels the timer. If this method is called before start, then the timer *will not be run*.
         """
         self._finished.set()
-        
+    
     def run(self):
         """
         Run the timer in the main thread. This is the same as calling start followed immediately by join.
