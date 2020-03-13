@@ -50,8 +50,8 @@ jobs:
       versionSpec: '$(pythonVersion)'
       addToPath: true
       architecture: 'x64'
-  - script: pip install -r tests/test-requirements.txt
-    displayName: "Install testing requirements"
+  - script: pip install -r tests/test-requirements.txt requirements.txt
+    displayName: "Install requirements"
   - script: pytest --maxfail=3 tests --cov=sloth
     displayName: "Run the tests"
   - script: pip install codecov && codecov -e $(pythonVersion) -t $(CODE_COV_TOKEN)
