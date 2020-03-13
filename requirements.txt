@@ -1,3 +1,4 @@
+click
 # ----------------------------------------------------------------------------
 # Copyright (c) 2020 Legorooj <legorooj@protonmail.com>
 # Copyright (c) 2020 FluffyKoalas <github.com/fluffykoalas>
