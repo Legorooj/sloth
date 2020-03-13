@@ -5,6 +5,7 @@
 [![codecov](https://codecov.io/gh/fluffykoalas/sloth/branch/dev/graph/badge.svg)](https://codecov.io/gh/fluffykoalas/sloth)
 [![Build Status](https://dev.azure.com/FluffyKoalas/Sloth/_apis/build/status/fluffykoalas.sloth?branchName=dev)](https://dev.azure.com/FluffyKoalas/Sloth/_build/latest?definitionId=2&branchName=dev)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3f46b1c00c674ce4b614be082c17ef5b)](https://www.codacy.com/gh/fluffykoalas/sloth?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fluffykoalas/sloth&amp;utm_campaign=Badge_Grade)
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://choosealicense.com/licenses/mit/)
 
 `sloth` is a Python package for speedtesting python code and functions with as little code as necessary.
 It's easy to use and, unlike many projects, has decent documentation.
