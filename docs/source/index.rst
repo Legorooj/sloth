@@ -1,4 +1,4 @@
-``sloth\docs``
+``sloth/docs``
 ==============
 
 *The* python speedtesting library
@@ -18,6 +18,21 @@ The idea behind this API is:
 
 See? described in 3 lines. *Everything* that ``timeit`` can do, ``sloth`` can do better. And *most* things ``timeit``
 *can't* do ``sloth`` can do anyway.
+
+
+A Quick Example
+---------------
+
+.. code-block:: python
+
+    >>> from sloth.simple import time_callable
+    >>> import time
+    >>> def my_func(a, b, c):
+    ...     time.sleep(1)
+    ...     print(a, b, c)
+    >>> time_callable(my_func, 2, 'a', 'b', 'c')
+    a b c
+    1.000063419342041
 
 
 Installation
