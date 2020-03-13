@@ -51,16 +51,16 @@ class TestEval(Test):
         check_type(dict, globals=self._gbls)
         check_type(Mapping, locals=self._gbls)
         self._statement = statement
+        self._caller = eval
     
     def run(self, gbls=None, lcls=None):
         s = Stopwatch(start=True)
-        eval(self._statement, self._gbls, self._lcls)
+        self._caller(self._statement, self._gbls, self._lcls)
         return s.stop()
 
 
 class TestExec(TestEval):
     
-    def run(self, gbls=None, lcls=None):
-        s = Stopwatch(start=True)
-        exec(self._statement, self._gbls, self._lcls)
-        return s.stop()
+    def __init__(self, statement, gbls=None, lcls=None):
+        super(TestExec, self).__init__(statement, gbls, lcls)
+        self._caller = exec
