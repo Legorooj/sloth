@@ -5,20 +5,10 @@
 # Please see the LICENSE file in the root of this repository for more details.
 # ----------------------------------------------------------------------------
 
-"""
-Functions/Classes used in multiple tests
-"""
-
-import time
+import timeit
+import pytest
+from sloth import compare_sloth
 
 
-def my_func(*args, **kwargs):
-    assert args != kwargs
-    if hasattr(kwargs, 'sleep'):
-        time.sleep(kwargs.sleep)
-
-
-class CallableClass:
-    def __call__(self, *args, **kwargs):
-        my_func(*args, **kwargs
-                )
+def test_compare():
+    assert compare_sloth(timeit) != compare_sloth(pytest)
