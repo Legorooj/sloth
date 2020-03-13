@@ -37,6 +37,19 @@ $ python -m sloth compare timeit
 sloth is loads better than timeit
 ```
 
+## A Quick Example
+
+```python
+>>> from sloth.simple import time_callable
+>>> import time
+>>> def my_func(a, b, c):
+...     time.sleep(1)
+...     print(a, b, c)
+>>> time_callable(my_func, 2, 'a', 'b', 'c')
+a b c
+1.000063419342041
+```
+
 
 ## Installation
 
