@@ -15,7 +15,7 @@ __all__ = [
 class TestRunner:
     
     def __init__(self, tests):
-        check_type(list, tests=tests)
+        check_type((list, tuple, set), tests=tests)
         for test in tests:
             check_subclass(Test, test=test.__class__)
         self._tests = tests
