@@ -4,9 +4,9 @@
 # This file and all others in this project are licensed under the MIT license.
 # Please see the LICENSE file in the root of this repository for more details.
 # ----------------------------------------------------------------------------
-from ..._utils import check_type
+from .._utils import check_type
 from .base import Test
-from ...timers import Stopwatch
+from ..timers import Stopwatch
 from typing import Mapping
 
 __all__ = [

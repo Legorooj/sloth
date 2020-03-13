@@ -4,7 +4,7 @@
 # This file and all others in this project are licensed under the MIT license.
 # Please see the LICENSE file in the root of this repository for more details.
 # ----------------------------------------------------------------------------
-from ..._utils import check_type, check_subclass
+from .._utils import check_type, check_subclass
 from .base import Test
 
 __all__ = [
