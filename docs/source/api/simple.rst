@@ -38,7 +38,7 @@ they wrap in the main API.
 
 .. py:function:: time_eval(snippet, n, gbls=None, lcls=None)
 
-    Speedtest ``eval(statement, gbls, lcls)``. See the
+   Speedtest ``eval(statement, gbls, lcls)``. See the
    `eval docs <https://docs.python.org/3/library/functions.html#eval>`_ docs for more info.
 
    :param snippet: The code statement to evaluate.
@@ -51,7 +51,7 @@ they wrap in the main API.
 
 .. py:function:: time_exec(snippet, n, gbls=None, lcls=None)
 
-    Speedtest ``exec(statement, gbls, lcls)``. See the
+   Speedtest ``exec(statement, gbls, lcls)``. See the
    `exec docs <https://docs.python.org/3/library/functions.html#exec>`_ docs for more info.
 
    :param snippet: The code statement to execute.
