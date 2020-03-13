@@ -6,7 +6,7 @@
 # ----------------------------------------------------------------------------
 
 from .timers import Timer
-from .raw.complex import tests, runners
+from .raw import tests, runners
 
 __all__ = [
     'call_after', 'time_callable', 'time_eval', 'time_exec'
