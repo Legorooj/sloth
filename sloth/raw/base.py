@@ -10,7 +10,7 @@ sloth.raw.complex.base provides the abstract base classes for the sloth.raw modu
 """
 
 import abc
-from ..._types import CodeObjType
+from .._types import CodeObjType
 
 __all__ = ['Test']
 
@@ -25,7 +25,7 @@ class Test(metaclass=abc.ABCMeta):
         return 'Test or subclass'
     
     @abc.abstractmethod
-    def run(self, *args, **kwargs):
+    def run(self):
         pass
     
     @staticmethod
