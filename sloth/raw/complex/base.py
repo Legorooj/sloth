@@ -25,7 +25,7 @@ class Test(metaclass=abc.ABCMeta):
         return 'Test or subclass'
     
     @abc.abstractmethod
-    def run(self):
+    def run(self, *args, **kwargs):
         pass
     
     @staticmethod
