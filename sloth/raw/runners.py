@@ -16,8 +16,8 @@ class TestRunner:
     
     def __init__(self, tests):
         check_type(list, tests=tests)
-        for i in range(len(tests)):
-            check_subclass(Test, test=tests[i].__class__)
+        for test in tests:
+            check_subclass(Test, test=test.__class__)
         self._tests = tests
     
     def run(self):
