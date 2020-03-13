@@ -1,6 +1,5 @@
-``sloth.raw.complex``: The base API
+``sloth.raw``: The base API
 ===================================
-
 
 .. toctree::
    :maxdepth: 2

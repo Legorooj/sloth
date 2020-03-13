@@ -1,7 +1,7 @@
-``sloth.raw.complex.base``: The abstract base classes for testing
+``sloth.raw.base``: The abstract base classes for testing
 =================================================================
 
-.. module:: sloth.raw.complex.base
+.. module:: sloth.raw.base
 
 This module provides the abstract base classes for tests. They are abstract classes, and *must* be subclassed.
 

@@ -1,4 +1,4 @@
-``sloth.raw.complex.tests``: Standard tests classes
+``sloth.raw.tests``: Standard tests classes
 ===================================================
 
 .. module:: sloth.raw.complex.tests
