@@ -50,7 +50,7 @@ jobs:
       versionSpec: '$(pythonVersion)'
       addToPath: true
       architecture: 'x64'
-  - script: pip install -r tests/test-requirements.txt requirements.txt
+  - script: pip install -r tests/test-requirements.txt -r requirements.txt
     displayName: "Install requirements"
   - script: pytest --maxfail=3 tests --cov=sloth
     displayName: "Run the tests"
