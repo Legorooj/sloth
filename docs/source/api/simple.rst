@@ -21,31 +21,42 @@ they wrap in the main API.
     :raises TypeError: if any of the arguments have incorrect types
 
 
-.. py:function:: time_func(func, iterations)
+.. py:function:: time_callable(callable, n, *args, **kwargs)
 
-    Time how long it takes to execute *func*, run *iterations* times and averaged.
+    Time how long it takes to execute *_callable*, run *iterations* times and averaged.
 
-    :param function func: The function to time
-    :param int iterations: The number of times to time *func*
+    :param function func: The callable object to time
+    :param int n: Number of times to run and average *_callable*
+    :param args: Positional arguments to be passed directly to *_callable*
+    :param kwargs: Keyword arguments to be passed directly to *_callable*
 
-    :returns: how long it took for the function to run, averaged
+    :returns: how long it took for the callable to run, averaged
     :rtype: float
 
     :raises TypeError: if any of the arguments have incorrect types
 
 
-.. py:function:: time_code(snippet, iterations, gs=None, lcs=None)
+.. py:function:: time_eval(snippet, n, gbls=None, lcls=None)
 
-    Time how long it takes to ``eval(snippet, gs, lcs)``, run *iterations* times and averaged.
+    Speedtest ``eval(statement, gbls, lcls)``. See the
+   `eval docs <https://docs.python.org/3/library/functions.html#eval>`_ docs for more info.
 
-    :param function func: The snippet to time
-    :param int iterations: The number of times to time *snippet*
-    :param gs: globals to pass to the eval statement. If not specified, the code will run in a clean environment.
-    :param lcs: locals to pass to the eval statement. If not specified, the code will run in a clean environment.
-    :type gs: dict or None
-    :type lcs: dict or None
+   :param snippet: The code statement to evaluate.
+   :type snippet: str or bytes or code
+   :param int n: Number of times to run and average the code.
 
-    :returns: how long it took for the *snippet* to run, averaged
-    :rtype: float
+   :return: How long the evaluation took to run
+   :rtype: float
 
-    :raises TypeError: if any of the arguments have incorrect types
+
+.. py:function:: time_exec(snippet, n, gbls=None, lcls=None)
+
+    Speedtest ``exec(statement, gbls, lcls)``. See the
+   `exec docs <https://docs.python.org/3/library/functions.html#exec>`_ docs for more info.
+
+   :param snippet: The code statement to execute.
+   :type snippet: str or bytes or code
+   :param int n: Number of times to run and average the code.
+
+   :return: How long the execute took to run
+   :rtype: float
