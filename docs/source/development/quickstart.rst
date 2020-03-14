@@ -12,10 +12,10 @@ Quickstart
 
 4. Commit as often as you'd like, but:
 
-  * Make sure the commits are logical and precise *before* asking for code review. Please see the
+ * Make sure the commits are logical and precise *before* asking for code review. Please see the
     :doc:`commit-guideline` section for more info.
-  * Adhere to :doc:`style`.
-  * If applicable, provide tests for your code. We aim to have around 99% code coverage in testing.
+ * Adhere to :doc:`style`.
+ * If applicable, provide tests for your code. We aim to have around 99% code coverage in testing.
 
 5. For new files, add the copyright header. It can be found in the ``sloth.__init__`` file.
 
