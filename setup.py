@@ -4,7 +4,7 @@ from sloth import __license__, __version__
 long_description = open('README.md', 'r').read()
 
 setup(
-    name='sloth',
+    name='sloth-speedtest',
     version=__version__,
     packages=['sloth'],
     author='Legorooj',
@@ -14,7 +14,7 @@ setup(
     keywords='python speed speedtesting testing speedtest awesome cli',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/kluffykoalas/sloth',
+    url='https://github.com/fluffykoalas/sloth',
     project_urls={
         "Bug Tracker": 'https://github.com/fluffykoalas/sloth/issues',
         "Documentation": 'https://sloth.fluffykoalas.org',
