@@ -41,5 +41,5 @@ def speedtest_file(file):
 
 
 if __name__ == '__main__':
-    # cli()
+    # cli() - Removed to show error
     speedtest_file(['D:\\FluffyKoalas\\Sloth\\sloth.py'])
