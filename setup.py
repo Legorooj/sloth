@@ -4,20 +4,20 @@ from sloth import __license__, __version__
 long_description = open('README.md', 'r').read()
 
 setup(
-    name='sloth',
+    name='sloth-speedtest',
     version=__version__,
     packages=['sloth'],
     author='Legorooj',
     maintainer='Legorooj, FluffyKoalas',
     author_email='legorooj@protonmail.com',
     description='The best python speedtesting library and command line tool',
-    keywords='python speed speedtesting testing speedtest awesome cli',
+    keywords='python speed speedtesting testing speedtest awesome cli sloth',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/kluffykoalas/sloth',
+    url='https://github.com/fluffykoalas/sloth',
     project_urls={
-        "Bug Tracker": 'https://github.com/fluffykoalas/sloth/issues',
-        "Documentation": 'https://sloth.fluffykoalas.org',
+        'Bug Tracker': 'https://github.com/fluffykoalas/sloth/issues',
+        'Documentation': 'https://sloth.fluffykoalas.org/en/stable',
         'Source Code': 'https://github.com/fluffykoalas/sloth'
     },
     classifiers=[
