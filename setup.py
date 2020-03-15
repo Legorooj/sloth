@@ -11,7 +11,7 @@ setup(
     maintainer='Legorooj, FluffyKoalas',
     author_email='legorooj@protonmail.com',
     description='The best python speedtesting library and command line tool',
-    keywords='python speed speedtesting testing speedtest awesome cli',
+    keywords='python speed speedtesting testing speedtest awesome cli sloth',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/fluffykoalas/sloth',
