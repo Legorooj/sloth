@@ -1,7 +1,4 @@
 Changelog
 =========
 
-0.1
-+++
-
-First release and documentation dump
+The changelog will be added in version 0.2
