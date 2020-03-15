@@ -11,15 +11,14 @@ Installation
 
 * From source:
 
-  1. ``git clone https://github.com/fluffykoalas/sloth.git`` - Downloading and unzipping a zip file from GitHub will
-     also work. You can find these on the `Releases <https://github.com/fluffykoalas/sloth/releases>`_ page.
+  1. Download the latest stable release from our `Releases Page <https://github.com/fluffykoalas/sloth/releases>`_.
 
-  2. Navigate into the directory the code is in with ``cd sloth``.
+  2. Decompress it, and navigate into the directory in a command line.
 
-  3. Build it with ``python setup.py install``. Make sure you are using the correct python interpreter.
+  3. Build it with ``python<version> setup.py install``. Make sure you are using the correct python interpreter.
 
 
 Dependencies
 ------------
 
-``sloth`` has only one dependency; ``tqdm``. This library provides any command line progress bars ``sloth`` might need.
+``sloth`` is completely standalone.
