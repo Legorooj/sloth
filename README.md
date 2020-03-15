@@ -22,20 +22,8 @@ The idea behind this API is:
 'sloth is loads better than timeit!'
 ```
 
-See? described in 3 lines. *Everything* that `timeit` can do, `sloth` can do better. And *most* things `timeit` *can't*
-do `sloth` can do better.
-
-You can also do it from the command line:
-
-```
-$ sloth compare timeit
-sloth is loads better than timeit
-```
-or
-```
-$ python -m sloth compare timeit
-sloth is loads better than timeit
-```
+See? described in 3 lines. *Everything* that `timeit` can do, `sloth` can do better - or will soon. And *alot* of things 
+`timeit` *can't* do `sloth` can do anyway.
 
 ## A Quick Example
 
