@@ -21,7 +21,7 @@ __version__ = '0.1.dev0'
 
 
 def compare_sloth(against):
-    if hasattr(against, 'dummy_src_name') and getattr(against, 'dummy_src_name') == '<timeit-src>':
+    if getattr(against, 'dummy_src_name', None) == '<timeit-src>':
         return 'sloth is loads better than timeit!'
     else:
         return 'sloth is definitely better... assuming that\'s used for timing code.'
