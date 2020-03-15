@@ -5,7 +5,7 @@ Seeing as ``sloth`` is an open source project, contributions are welcome! This a
 community want to be included.
 
 If you've found a bug, or would like to request a feature, please submit it on our
-`issue tracker <https://github.com/fluffykoalas/issues>`_ on GitHub.
+`issue tracker <https://github.com/fluffykoalas/sloth/issues>`_ on GitHub.
 
 
 .. toctree::
