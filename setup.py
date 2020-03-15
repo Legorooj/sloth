@@ -16,8 +16,8 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/fluffykoalas/sloth',
     project_urls={
-        "Bug Tracker": 'https://github.com/fluffykoalas/sloth/issues',
-        "Documentation": 'https://sloth.fluffykoalas.org',
+        'Bug Tracker': 'https://github.com/fluffykoalas/sloth/issues',
+        'Documentation': 'https://sloth.fluffykoalas.org/en/stable',
         'Source Code': 'https://github.com/fluffykoalas/sloth'
     },
     classifiers=[
