@@ -1,0 +1,59 @@
+# Python package
+# Create and test a Python package on multiple Python versions.
+# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/python
+
+trigger:
+- dev
+- master
+
+pr:
+- dev
+- master
+
+
+jobs: 
+- job: "StyleCheck"
+  displayName: "Code Style Check (flake8)"
+  pool:
+    vmImage: "ubuntu-18.04"
+
+  steps:  
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.7'
+      addToPath: true
+      architecture: 'x64'
+
+  - script: pip install flake8
+    displayName: "Install flake8"
+
+  - script: flake8 sloth
+    displayName: "Run style check"
+
+- job: "RunTests"
+  pool:
+    vmImage: "ubuntu-18.04"
+  strategy:
+    matrix:
+      Python35:
+        pythonVersion: 3.5
+      Python36:
+        pythonVersion: 3.6
+      Python37:
+        pythonVersion: 3.7
+      Python38:
+        pythonVersion: 3.8
+  steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '$(pythonVersion)'
+      addToPath: true
+      architecture: 'x64'
+  - script: pip install -r tests/test-requirements.txt -r requirements.txt
+    displayName: "Install requirements"
+  - script: pytest --maxfail=3 tests --cov=sloth
+    displayName: "Run the tests"
+  - script: pip install codecov && codecov -e $(pythonVersion) -t $(CODE_COV_TOKEN)
+    displayName: "Upload coverage to CodeCov"
+    condition: succeeded()
