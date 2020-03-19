@@ -12,6 +12,7 @@ source =
     sloth
 omit =
     tests
+    sloth/__main__.py
 
 [report]
 # Regexes for lines to exclude from consideration
