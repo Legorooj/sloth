@@ -42,7 +42,7 @@ def speedtest_file(file):
         test = TestExec(file.read())  # gbls and lcls are set to nothing; ie clean environment
         click.echo('Running file...')
         result = test.run()
-        click.echo('{} took {} seconds to run'.format(filename, result))
+        click.echo('{} took {!s} seconds to run'.format(filename, result))
 
 
 if __name__ == '__main__':
