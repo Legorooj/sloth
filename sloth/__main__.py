@@ -11,9 +11,10 @@ from sloth.raw.tests import TestExec
 from importlib import import_module
 
 
-@click.group(
-    'sloth'
-)
+CLICK_CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
+
+
+@click.group('sloth', context_settings=CLICK_CONTEXT_SETTINGS)
 @click.version_option(__version__)
 def cli():
     pass
