@@ -1,7 +1,9 @@
-# Python package
-# Create and test a Python package on multiple Python versions.
-# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/python
+# ----------------------------------------------------------------------------
+# Copyright (c) 2020 Legorooj <legorooj@protonmail.com>
+# Copyright (c) 2020 FluffyKoalas <github.com/fluffykoalas>
+# This file and all others in this project are licensed under the MIT license.
+# Please see the LICENSE file in the root of this repository for more details.
+# ----------------------------------------------------------------------------
 
 trigger:
 - dev
