@@ -22,7 +22,6 @@ def cli():
     """The sloth command line utility.
     Please type 'sloth [cmd] --help' for information about specific commands.
     """
-    pass
 
 
 @cli.command('speedtest-file', short_help='speedtest a file')
