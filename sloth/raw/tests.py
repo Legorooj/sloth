@@ -31,8 +31,8 @@ class TestCallableWithArgs(TestCallable):
     
     def __init__(self, _callable, *args, **kwargs):
         super(TestCallableWithArgs, self).__init__(_callable=_callable)
-        self._args = args or ()
-        self._kwargs = kwargs or dict()
+        self._args = args
+        self._kwargs = kwargs
     
     def run(self, *args, **kwargs):
         args = args or self._args
@@ -49,13 +49,17 @@ class TestEval(Test):
         self._gbls = gbls or dict()
         self._lcls = lcls or dict()
         check_type(dict, globals=self._gbls)
-        check_type(Mapping, locals=self._gbls)
+        check_type(Mapping, locals=self._lcls)
         self._statement = statement
         self._caller = eval
     
     def run(self, gbls=None, lcls=None):
+        gbls = gbls or self._gbls
+        lcls = lcls or self._lcls
+        check_type(dict, globals=gbls)
+        check_type(Mapping, locals=lcls)
         s = Stopwatch(start=True)
-        self._caller(self._statement, self._gbls, self._lcls)
+        self._caller(self._statement, gbls, lcls)
         return s.stop()
 
 
