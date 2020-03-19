@@ -32,3 +32,8 @@ class Test(metaclass=abc.ABCMeta):
     def _check_eval_safe(obj):
         if not isinstance(obj, (CodeObjType, str, bytes)):
             raise TypeError('obj must be a compiled code object, string, or bytes-like-object')
+        if not isinstance(obj, CodeObjType):
+            try:
+                compile(obj, '<string>', 'exec')
+            except Exception:
+                raise TypeError('unable to compile code snippet')
