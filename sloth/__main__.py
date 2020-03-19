@@ -17,10 +17,13 @@ CLICK_CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 @click.group('sloth', context_settings=CLICK_CONTEXT_SETTINGS)
 @click.version_option(__version__)
 def cli():
+    """The sloth command line utility.
+    Please type 'sloth [cmd] --help' for information about specific commands.
+    """
     pass
 
 
-@cli.command('speedtest-file')
+@cli.command('speedtest-file', short_help='speedtest a file')
 @click.argument(
     'file',
     type=click.Path(
@@ -32,6 +35,7 @@ def cli():
     )
 )
 def speedtest_file(file):
+    """Time the execution of FILE"""
     filename = file
     click.echo('Loading python file {}'.format(filename))
     with open(filename, 'rb') as file:
