@@ -43,6 +43,20 @@ def speedtest_file(file):
         click.echo('Running file...')
         result = test.run()
         click.echo('{} took {!s} seconds to run'.format(filename, result))
+        
+
+@cli.command('compare', short_help='useless utility for showing off')
+@click.argument('other', type=click.STRING)
+def compare(other):
+    """
+    This command wraps the function sloth.compare_against(other)
+    """
+    try:
+        mod = import_module(other)
+        click.echo(compare_sloth(mod))
+    except ModuleNotFoundError:
+        click.echo(compare_sloth(other))
+        
 
 
 if __name__ == '__main__':
