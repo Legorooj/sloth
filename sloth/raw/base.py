@@ -36,4 +36,4 @@ class Test(metaclass=abc.ABCMeta):
             try:
                 compile(obj, '<string>', 'exec')
             except Exception:
-                raise TypeError('unable to compile code snippet')
+                raise ValueError('unable to compile code snippet')

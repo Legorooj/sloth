@@ -31,4 +31,7 @@ def test_eval_safe():
     
     with pytest.raises(TypeError):
         base.Test._check_eval_safe(list())
+    with pytest.raises(ValueError):
+        base.Test._check_eval_safe('invalid python code')
     base.Test._check_eval_safe(str())
+    base.Test._check_eval_safe(compile('str()', '<string>', 'exec'))
