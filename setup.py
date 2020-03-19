@@ -37,5 +37,10 @@ setup(
     python_requires='>=3.5',
     install_requires=[
     ],
-    license=__license__
+    license=__license__,
+    entry_points={
+        'console_scripts': {
+            'sloth': 'sloth.__main__:cli'
+        }
+    }
 )

@@ -17,7 +17,7 @@ __license__ = 'MIT'
 
 __uri__ = 'https://github.com/FluffyKoalas/sloth'
 
-__version__ = '0.1'
+__version__ = '0.2dev0'
 
 
 def compare_sloth(against):
