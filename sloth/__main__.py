@@ -8,7 +8,9 @@
 import click
 from sloth import __version__, compare_sloth
 from sloth.raw.tests import TestExec
+from sloth.raw.runners import TestRunner
 from importlib import import_module
+from decimal import Decimal
 
 
 CLICK_CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
@@ -58,7 +60,45 @@ def compare(other):
         click.echo(compare_sloth(other))
         
 
+@cli.command('speedtest-snippet', short_help='speedtest a code snippet')
+@click.argument('snippet', type=click.STRING)
+@click.option('-a', '--average', default=1, type=click.INT, help='Number of times to execute SNIPPET')
+@click.option('-p', '--pre', default=10, type=click.INT,
+              help='Controls the truncation of the results, in decimal places. Use -1 for no truncation. Defaults to 10'
+              )
+def speedtest_snippet(snippet, average, pre):
+    """
+    Speedtest a snippet of code
+    """
+    if pre == 0:
+        click.echo('Invalid value 0 for precision argument')
+    if average > 1:
+        values = []
+        with click.progressbar(length=average) as bar:
+            test = TestRunner([TestExec(snippet)]*average)
+            for i in test.run():
+                values.append(i)
+                bar.update(1)
+        result = sum(values) / average
+        mini = min(values)
+        maxi = max(values)
+        click.echo(
+            '{} executions:\n'
+            'fastest: {mini}s\n'
+            'slowest: {maxi}s\n'
+            'average: {re}s'.format(
+                average,
+                mini=str(Decimal(mini))[:pre],
+                maxi=str(Decimal(maxi))[:pre],
+                re=str(Decimal(result))[:pre]
+            )
+        )
+    else:
+        test = TestExec(snippet)
+        click.echo('Starting test')
+        click.echo('Loading snippet')
+        click.echo('1 execution took {} seconds.'.format(Decimal(test.run())))
+
 
 if __name__ == '__main__':
-    # cli() - Removed to show error
-    speedtest_file(['D:\\FluffyKoalas\\Sloth\\sloth.py'])
+    cli()
