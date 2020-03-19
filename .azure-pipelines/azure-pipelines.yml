@@ -8,6 +8,7 @@
 trigger:
 - dev
 - master
+- "*"
 
 pr:
   branches:
