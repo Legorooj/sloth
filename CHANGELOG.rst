@@ -1,4 +1,16 @@
 Changelog
 =========
 
-The changelog will be added in version 0.2
+v0.2
+++++
+
+Bug Fixes
+---------
+
+* Stopped arguments that were passed in on TestEval from being ignored
+
+
+Features
+--------
+
+* Added command line interface
