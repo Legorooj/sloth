@@ -32,7 +32,7 @@ class Stopwatch:
         
         Starts the *StopWatch*.
         """
-        self._time = time.time()
+        self._time = time.perf_counter()
     
     def stop(self):
         """
@@ -42,7 +42,7 @@ class Stopwatch:
         :returns: The time - in seconds - elapsed since :py:meth:`start` was called
         :rtype: float
         """
-        t = ZeroFloat(time.time()) - self._time
+        t = ZeroFloat(time.perf_counter()) - self._time
         self._time = 0
         return t
     
@@ -54,7 +54,7 @@ class Stopwatch:
         :returns: The time - in seconds - elapsed since :py:meth:`start` was called
         :rtype: int
         """
-        return ZeroFloat(time.time()) - self._time
+        return ZeroFloat(time.perf_counter()) - self._time
     
     @property
     def running(self):

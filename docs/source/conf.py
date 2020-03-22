@@ -22,7 +22,7 @@ copyright = '2020, Legorooj, FluffyKoalas'
 author = 'Legorooj, FluffyKoalas'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1dev0'
+release = '0.2'
 
 
 # -- General configuration ---------------------------------------------------

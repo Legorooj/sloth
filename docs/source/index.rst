@@ -16,9 +16,17 @@ The idea behind this API is:
     >>> compare_sloth(timeit)
     'sloth is loads better than timeit!'
 
-See? described in 3 lines. *Everything* that ``timeit`` can do, ``sloth`` can do better. And *most* things ``timeit``
-*can't* do ``sloth`` can do anyway.
+See? described in 3 lines. *Everything* that ``timeit`` can do, ``sloth`` can do better. And *most* (speedtest-related)
+things ``timeit`` *can't* do ``sloth`` can do anyway.
 
+Or, for the bash ninjas and command liners:
+
+.. code-block::
+
+    $ sloth compare timeit
+    sloth is loads better than timeit!
+    $ python3 -m sloth compare timeit
+    sloth is loads better than timeit!
 
 A Quick Example
 ---------------
@@ -50,7 +58,8 @@ Please see :doc:`installation` for more information.
 Usage
 -----
 
-Please see the :doc:`api/index` or :doc:`examples/index`.
+Please see the :doc:`api/index` for API usage guidance. Please run ``sloth -h`` or ``sloth --help`` for help with the
+command line tool.
 
 
 Links
@@ -58,6 +67,7 @@ Links
 
 * `PyPI <https://pypi.org/project/sloth-speedtest>`_
 * `GitHub <https://github.com/fluffykoalas/sloth>`_
+* `Docs <https://sloth.fluffykoalas.org/en/stable>`_
 
 
 Index
@@ -68,13 +78,6 @@ Index
    :caption: API reference
 
    api/index
-
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Examples
-
-   examples/index
 
 
 .. toctree::
