@@ -39,8 +39,8 @@ setup(
     ],
     license=__license__,
     entry_points={
-        'console_scripts': {
-            'sloth': 'sloth.__main__:cli'
-        }
+        'console_scripts': [
+            'sloth=sloth.__main__:cli'
+        ]
     }
 )
