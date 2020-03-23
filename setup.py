@@ -6,7 +6,7 @@ long_description = open('README.md', 'r').read()
 setup(
     name='sloth-speedtest',
     version=__version__,
-    packages=['sloth'],
+    packages=['sloth', 'sloth.raw'],
     author='Legorooj',
     maintainer='Legorooj, FluffyKoalas',
     author_email='legorooj@protonmail.com',
