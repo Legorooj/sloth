@@ -36,6 +36,7 @@ setup(
     ],
     python_requires='>=3.5',
     install_requires=[
+        'click'
     ],
     license=__license__,
     entry_points={
