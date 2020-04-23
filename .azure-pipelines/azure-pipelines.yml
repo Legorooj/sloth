@@ -32,7 +32,7 @@ jobs:
   - script: pip install flake8
     displayName: "Install flake8"
 
-  - script: flake8 sloth
+  - script: flake8 src/sloth
     displayName: "Run style check"
 
 - job: "RunTests"
@@ -54,10 +54,14 @@ jobs:
       versionSpec: '$(pythonVersion)'
       addToPath: true
       architecture: 'x64'
-  - script: pip install -r tests/test-requirements.txt -r requirements.txt
+  - script: pip install -r requirements-test.txt -r requirements.txt
     displayName: "Install requirements"
+  - script: pip install -e .
+    displayName: "Install the package in editable mode"
   - script: pytest --maxfail=3 tests --cov=sloth
     displayName: "Run the tests"
-  - script: pip install codecov && codecov -e $(pythonVersion) -t $(CODE_COV_TOKEN)
+  - script: |
+      curl -o codecov.sh -f https://codecov.io/bash
+      sh codecov.sh -n $(pythonVersion) -Z
     displayName: "Upload coverage to CodeCov"
-    condition: succeeded()
+    condition: succeeded()  # Make sure that this only runs if *everything* else has succeeded.
