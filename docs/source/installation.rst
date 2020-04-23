@@ -15,10 +15,17 @@ Installation
 
   2. Decompress it, and navigate into the directory in a command line.
 
-  3. Build it with ``python<version> setup.py install``. Make sure you are using the correct python interpreter.
+  3. Install with ``pip install .``. Make sure you are using the correct python interpreter.
+
+
+Installing the development release
+----------------------------------
+
+* ``pip install https://github.com/fluffykoalas/sloth/archive/dev.tar.gz``
 
 
 Dependencies
 ------------
 
-``sloth`` is completely standalone.
+``sloth`` needs `click>=7.0`, and `setuptools>=40.0` to work.
+These are installed automatically when you install ``sloth``.

@@ -13,6 +13,7 @@ If you've found a bug, or would like to request a feature, please submit it on o
    :caption: Development Guide
 
    quickstart
+   setup
    changelog-guide
    commit-guideline
    updating-the-docs
