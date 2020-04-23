@@ -15,7 +15,7 @@ omit =
     sloth/__main__.py
 
 [report]
-# Regexes for lines to exclude from consideration
+# Regex patterns/exact match strings for lines to exclude from consideration
 exclude_lines =
     pragma: no cover
     def __repr__
