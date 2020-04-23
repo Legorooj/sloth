@@ -6,6 +6,7 @@
 # ----------------------------------------------------------------------------
 
 import click
+import pkg_resources
 from sloth import __version__, compare_sloth
 from sloth.raw.tests import TestExec
 from sloth.raw.runners import TestRunner
@@ -24,7 +25,7 @@ def cli():
     """
 
 
-@cli.command('speedtest-file', short_help='speedtest a file')
+@click.command('speedtest-file', short_help='speedtest a file')
 @click.argument(
     'file',
     type=click.Path(
@@ -46,7 +47,7 @@ def speedtest_file(file):
         click.echo('{} took {!s} seconds to run'.format(filename, result))
         
 
-@cli.command('compare', short_help='useless utility for showing off')
+@click.command('compare', short_help='useless utility for showing off')
 @click.argument('other', type=click.STRING)
 def compare(other):
     """
@@ -59,7 +60,7 @@ def compare(other):
         click.echo(compare_sloth(other))
         
 
-@cli.command('speedtest-snippet', short_help='speedtest a code snippet')
+@click.command('speedtest-snippet', short_help='speedtest a code snippet')
 @click.argument('snippet', type=click.STRING)
 @click.option('-a', '--average', default=1, type=click.INT, help='Number of times to execute SNIPPET')
 @click.option('-p', '--pre', default=10, type=click.INT,
@@ -97,6 +98,10 @@ def speedtest_snippet(snippet, average, pre):
         click.echo('Starting test')
         click.echo('Loading snippet')
         click.echo('1 execution took {} seconds.'.format(Decimal(test.run())))
+        
+
+for entry_point in pkg_resources.iter_entry_points('sloth.ext'):
+    cli.add_command(entry_point.load(), entry_point.name)
 
 
 if __name__ == '__main__':

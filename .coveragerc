@@ -9,10 +9,10 @@
 branch = True
 cover_pylib = False
 source =
-    sloth
+    src/sloth
 omit =
     tests
-    sloth/__main__.py
+    src/sloth/__main__.py
 
 [report]
 # Regex patterns/exact match strings for lines to exclude from consideration

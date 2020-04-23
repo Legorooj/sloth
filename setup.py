@@ -1,12 +1,11 @@
-from setuptools import setup
-from sloth import __license__, __version__
+from setuptools import setup, find_packages
 
 long_description = open('README.md', 'r').read()
 
 setup(
     name='sloth-speedtest',
-    version=__version__,
-    packages=['sloth', 'sloth.raw'],
+    setup_requires="setuptools >= 40.0.0",
+    packages=find_packages(where='src'),
     author='Legorooj',
     maintainer='Legorooj, FluffyKoalas',
     author_email='legorooj@protonmail.com',
@@ -36,12 +35,19 @@ setup(
     ],
     python_requires='>=3.5',
     install_requires=[
-        'click'
+        # IMPORTANT: Keep aligned with requirements.txt
+        'click',
+        'setuptools >= 40.0.0',
     ],
-    license=__license__,
+    license='MIT',
     entry_points={
         'console_scripts': [
-            'sloth=sloth.__main__:cli'
+            'sloth = sloth.__main__:cli'
+        ],
+        'sloth.ext': [
+            'compare = sloth.__main__:compare',
+            'speedtest-file = sloth.__main__:speedtest_file',
+            'speedtest-snippet = sloth.__main__:speedtest_snippet'
         ]
     }
 )
