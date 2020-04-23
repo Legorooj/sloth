@@ -14,11 +14,9 @@ import time
 
 def my_func(*args, **kwargs):
     assert args != kwargs
-    if hasattr(kwargs, 'sleep'):
-        time.sleep(kwargs.sleep)
+    time.sleep(getattr(kwargs, 'sleep', 0))
 
 
 class CallableClass:
     def __call__(self, *args, **kwargs):
-        my_func(*args, **kwargs
-                )
+        my_func(*args, **kwargs)
