@@ -33,7 +33,7 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Topic :: Software Development :: Testing'
     ],
-    python_requires='>=3.5',
+    python_requires='>=3.6',
     install_requires=[
         # IMPORTANT: Keep aligned with requirements.txt
         'click',
