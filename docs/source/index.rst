@@ -40,8 +40,8 @@ A Quick Example
     ...     print(a, b, c)
     >>> time_callable(my_func, 2, 'a', 'b', 'c')
     a b c
-    1.000063419342041
-
+    a b c
+    1.0150199500000028
 
 Installation
 ------------
